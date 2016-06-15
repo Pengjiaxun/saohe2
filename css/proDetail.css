@@ -1,0 +1,19 @@
+.content-wrap {
+    background-color:#fff;
+    margin: 0.5rem;
+    border-radius:0.25rem;
+}
+.content {
+    margin-bottom: 0.25rem;
+    padding: 0.25rem;
+    position: relative;
+}
+.more {
+    margin-top: 0.75rem;
+    text-align: center;
+}
+
+
+
+
+

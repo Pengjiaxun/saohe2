@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="cardspay.cn">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>客户订单</title>
+    <link rel="stylesheet" href="frozenui-1.3.0/css/frozen.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/order.css">
+
+</head>
+<body>
+    <div class="header">
+        <div class="headItem order">待发货</div>
+        <div class="headItem sent">已发货</div>
+        <div class="headItem on got">已收货</div>        
+    </div>
+    <div class="headCover"></div>
+    <div class="orderItem">
+        <h1>标题</h1>
+        <p class="orderDetail">
+            各种物质组成的矩形秋装天梯，叫做星球。星球有一定的星族昂，有自己的运行轨道。
+        </p>
+        <p class="orderDate">2016年5月22日</p>
+    </div>
+    <div class="orderItem">
+        <h1>标题</h1>
+        <p class="orderDetail">
+            各种物质组成的矩形秋装天梯，叫做星球。星球有一定的星族昂，有自己的运行轨道。
+        </p>
+        <p class="orderDate">2016年5月22日</p>
+    </div>
+
+    <script src="frozenui-1.3.0/lib/zepto.min.js"></script>
+    <script src="frozenui-1.3.0/js/frozen.js"></script>
+    <script src="js/rem.js"></script>
+    <script>      
+        $(".headItem").tap(function(){
+            $(this).addClass('on').siblings().removeClass('on');
+        });
+        $(".sent").tap(function(){
+            location.href="order_sent.html";
+        });
+        $(".order").tap(function(){
+            location.href="order.html";
+        });
+    </script>
+</body>
+</html>

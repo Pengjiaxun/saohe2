@@ -1,0 +1,38 @@
+.suggestion{
+	margin:0.625rem;
+}
+.suggestion textarea{
+	width: 17.525rem;
+	height: 10.9rem;
+	padding: 0.625rem;
+	box-sizing: border-box;
+	font-size: 0.7rem;
+	resize:none;
+	border-radius: 5px;
+}
+.wordNum{
+	position: absolute;
+	font-size: 0.7rem;
+	color: #888888;
+	top: 10.2rem;
+	right: 1rem;
+}
+.btn{
+	margin-top: 1.175rem;
+}
+::-webkit-input-placeholder { /* WebKit browsers */ 
+    font-size:0.7rem;
+    color: #B2B2B2; 
+} 
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+    font-size:0.7rem;
+    color: #B2B2B2; 
+} 
+::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+    font-size:0.7rem;
+    color: #B2B2B2; 
+} 
+:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+    font-size:0.7rem;
+    color: #B2B2B2; 
+} 

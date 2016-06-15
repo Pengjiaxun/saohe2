@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="cardspay.cn">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>账号信息</title>
+    <link rel="stylesheet" href="frozenui-1.3.0/css/frozen.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/account_info.css">
+
+</head>
+<body>
+    <section class="accountInfo">
+        <div class="accountItem vg-flex-wrap">
+            <label for="phone">+86</label>
+            <div class="inputbox vg-flex-item">
+                <input type="text" placeholder="请填写手机号码">
+            </div>
+        </div>
+        <div class="accountItem vg-flex-wrap">
+            <label for="phone">验证码</label>
+            <div class="inputbox vg-flex-item">
+                <input type="text" placeholder="请填写短信验证码">
+            </div>
+            <span class="sendBtn">发送</span>
+        </div>
+        <div class="accountItem vg-flex-wrap">
+            <label for="phone">登录密码</label>
+            <div class="inputbox vg-flex-item">
+                <input type="text" placeholder="6位数字密码，请牢记">
+            </div>
+        </div>
+    </section>
+    <div class="window">
+        <i class="window_icon"></i>
+        <p class="window_content">已发送</p>
+    </div>
+    <p>账号保护启用后，通过短息验证码登录骚盒app更安全</p>
+    <button class="btn">确定</button>
+    <p>账号保护启用后，享受更多的便利服务</p>
+    <p class="lp">
+        <span>极速登录</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span>找回密码</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span>短信通知</span>
+    </p>
+    <script src="frozenui-1.3.0/lib/zepto.min.js"></script>
+    <script src="frozenui-1.3.0/js/frozen.js"></script>
+    <script src="js/rem.js"></script>
+    <script> 
+        var timer,flag=true;     
+        $(".sendBtn").tap(function(){
+            var that=$(this);
+            $(".window").show();
+            if(flag){
+                clearInterval(timer);
+                $(this).addClass("disabled");
+                timer=setInterval(function(){
+                    $(".window").hide();
+                },3000)
+               
+                var t=60;
+                timer=setInterval(function(){
+                    if(t>1){
+                        t--;
+                        that.text(t+"s后可再发送");
+                        flag=false;
+                    }else{
+                        that.text("发送").removeClass("disabled");
+                        clearInterval(timer);
+                        flag=true;
+                    }      
+                },1000)
+            }               
+        });
+    </script>
+</body>
+</html>

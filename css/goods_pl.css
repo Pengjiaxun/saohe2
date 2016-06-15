@@ -1,0 +1,48 @@
+body{background:#fff;}
+.pl_item{
+    padding:0 0.75rem;
+}
+.cotent{
+    position:relative;
+    width:100%;
+    border-bottom:1px solid #e5e5e5;
+    font-size:0.7rem;
+    overflow:hidden;
+    padding:0.5rem 0;
+}
+.hold{
+    height:1.6rem;
+}
+.pl_item .head_l,.pl_item .head_r{
+    color:#999;
+    font-size:0.7rem;
+}
+.pl_item .head_l{
+    text-align:left;
+}
+.pl_item .head_r{
+    text-align:right;
+}
+.pl_item .pl_bottom{
+    font-size:0.8rem;
+}
+.cotent img{
+    position:absolute;
+    top:1.5rem;
+    right:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="cardspay.cn">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>反馈意见</title>
+    <link rel="stylesheet" href="frozenui-1.3.0/css/frozen.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/sugges.css">
+</head>
+<body>
+
+    <div class="suggestion">
+        <textarea id="text" placeholder="我们期待您的意见" maxlength="140"></textarea>
+        <span class="wordNum">140</span>
+    </div>
+    <button class="btn">发送</button>
+
+    <script src="frozenui-1.3.0/lib/zepto.min.js"></script>
+    <script src="frozenui-1.3.0/js/frozen.js"></script>
+    <script src="js/rem.js"></script>
+    <script>
+        $("#text").keyup(function(){
+            var curleng=$("#text").val().length;
+            // alert(curleng);
+            var surplus=140-curleng;
+            $(".wordNum").html(surplus);
+            if(surplus==0){
+                $(".wordNum").css("color","red");
+            }else{
+                $(".wordNum").css("color","#888888");
+            }
+        });      
+
+    </script>
+</body>
+</html>

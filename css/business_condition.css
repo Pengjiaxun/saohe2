@@ -1,0 +1,31 @@
+
+/*中间*/
+.ui-border-b{
+	border-bottom:1px solid #e0e0e0;
+}
+.content{
+	margin-top:1em;
+}
+.right_info span{
+	color:#7aad1e;
+	font-size:0.8rem;
+}
+.bill_bottom{
+	font-size:0.7rem;
+	color:#9b9b9b;
+	line-height:1rem;
+}
+.vg-list-cons{
+    padding-left:0.4rem;
+}
+.vg-list-item{
+	padding:0.375rem 0;
+}
+
+
+
+
+
+
+
+

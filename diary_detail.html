@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="cardspay.cn">
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0"/>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <title>店长日记</title>
+        <link rel="stylesheet" href="frozenui-1.3.0/css/frozen.css">
+        <link rel="stylesheet" type="text/css" href="css/common.css">
+        <link rel="stylesheet" type="text/css" href="css/diary_detail.css">       
+    </head>
+<body>
+	<!--店长日记-->
+    <section class="sec-diaryList" id="container">
+        <div class="diary-list">
+            <div class="diary-list-bd">
+                <div class="published-time">
+                    <span><em>绍熙</em>&nbsp;&nbsp;|&nbsp;&nbsp;201601.02 12:21:11</span>
+                </div>
+                <div class="desc dhide">
+                    <p>
+                    盛小游戏 雷恩的饰品——狼齿 这是雷恩在野外遇到野狼把狼打死并一举拔下 这是勇士的象征！这是勇士的象征！这是勇士的象征！    
+                    </p>
+                    <button class="descBtn">展开</button>
+                </div>
+            <ul class="imglist imglist-3">
+                    <li><img src="images/p1.jpg" alt=""></li>
+                    <li><img src="images/p1.jpg" alt=""></li>
+                    <li><img src="images/p1.jpg" alt=""></li>
+                    <li><img src="images/p1.jpg" alt=""></li>
+                    <li><img src="images/p1.jpg" alt=""></li>
+                    <li><img src="images/p1.jpg" alt=""></li>
+                    <li><img src="images/p1.jpg" alt=""></li>
+                    <li><img src="images/p1.jpg" alt=""></li>
+                    <li><img src="images/p1.jpg" alt=""></li>
+                </ul>
+            </div>
+           
+            <div class="diary-line"></div>
+            <div class="pro-box vg-flex-wrap">
+                <div class="pro-img"><img src="images/p1.jpg" alt=""><span>推荐</span></div>
+                <div class="vg-flex-item pro-cnt">
+                    <h2>2015超新款巧克力浓香蛋糕包邮包邮包邮2015超新款巧克力浓香蛋糕包邮包邮包邮2015超新款巧克力浓香蛋糕包邮包邮包邮  40g/块</h2>
+                    <p>￥122.00</p>
+                </div>
+            </div>
+            <div class="diary-line"></div>
+            <a class="diary-shop-info vg-flex-wrap" href="index.html">
+                <img src="images/p1.jpg" alt="" />
+                <p class="vg-flex-item">店@阿木木</p>
+                <span>进入店铺</span>
+            </a>
+
+
+        </div>
+    </section>
+
+    <script src="js/rem.js"></script>
+    <script src="frozenui-1.3.0/lib/zepto.min.js"></script>
+    <script src="frozenui-1.3.0/js/frozen.js"></script>
+
+   <script type="text/javascript">
+
+    $(function(){
+        
+        // 详情描述收起
+        var show=true;
+        $(".descBtn").tap(function(){
+            if(show){
+                $(this).text("收起").parent().removeClass("dhide");
+                show=false;
+            }else{
+                $(this).text("展开").parent().addClass("dhide");
+                show=true;
+            }   
+        })
+
+        // 点赞
+        var praise=true;
+        $(".praise-icon").tap(function(){
+            // ajax请求
+            if(praise){
+                // 点赞
+                $(this).removeClass("praise-icon-cancel");
+                $(this).addClass("praise-scale");
+                $(this).on('webkitAnimationEnd',function(){
+                    $(this).removeClass("praise-scale");
+                    praise=false;
+                })
+            }else{
+                // 取消
+                $(this).addClass("praise-icon-cancel");
+                praise=true;
+            }
+        });
+    })
+</script>
+</body>
+</html>

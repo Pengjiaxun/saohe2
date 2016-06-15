@@ -1,0 +1,67 @@
+
+/*中间*/
+.ui-border-b{
+	border-bottom:1px solid #e0e0e0;
+}
+.content{
+	margin-top:1em;
+}
+.content a{
+	margin-top:1rem;
+}
+.right_info span{
+	color:#7aad1e;
+	font-size:0.8rem;
+}
+.bill_bottom{
+	font-size:0.7rem;
+	color:#9b9b9b;
+	line-height:1rem;
+}
+.vg-list-cons{
+    padding:0 0.8rem 0 0.4rem;
+}
+.address_t{
+    overflow:hidden;
+    height:2.4rem;
+    /*text-align:center;*/
+}
+.vg-list-item{
+	padding:0.375rem 0;
+}
+
+.weui_btn_primary{
+	background-color:#83267b;
+    font-size:0.85rem;
+}
+.weui_btn_primary:not(.weui_btn_disabled):active {
+    color: hsla(0,0%,100%,.4);
+    background-color: #83267b;
+}
+.content .tel{
+	/*margin-left:1rem;*/
+}
+.content .spe{
+	margin-right:1.5rem;
+}
+.address_name{width: 4rem;}
+
+/* my_address_new */
+.choosebar{
+	width: 0.25rem;
+	height: auto;
+	background-color: #83267b;
+	margin: -0.375rem 0;
+}
+.vg:after{display: none;}
+.address_content{position:relative;}
+.edit{
+    position: absolute;
+    top: 3%;
+    right: 0.1rem;
+    font-size: 0.7rem;
+    color: #83267b;
+    padding:1.4rem 0.3rem;
+}
+
+

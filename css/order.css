@@ -1,0 +1,60 @@
+.orderItem,.msgItem{
+	padding:0.6rem 0.8rem 1.4rem 0.8rem;
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #EEEEEE;
+}
+.orderItem h1,.msgItem h1{
+	position: relative;
+	font-size: 0.85rem;
+	color: #222222;
+	margin-bottom: 0.5rem;
+
+}
+.orderDetail,.msgDetail{
+	color: #222222;
+	font-size: 0.65rem;
+	margin-bottom: 0.6rem;
+
+}
+.orderDate,.msgDate,.source{
+	color: #CECECE;
+	font-size: 0.65rem;
+	text-align: right;
+    line-height:1rem;
+    display:block;
+    /*width:3.6rem;*/
+    height:0.7rem;
+    margin-bottom:0.5rem;
+}
+/* 消息中心样式 */
+.noread h1:before{
+	content:"";
+	position: absolute;
+	display: block;
+	width: 0.35rem;
+	height: 0.35rem;
+	background-color:#00C335;
+	border-radius: 50%;
+	top:50%;
+	margin-top: -0.175rem;
+	left: -0.5rem;
+}
+
+.read h1,.read .msgDetail{color:#999999;}
+/*日记列表*/
+.msgItem{position: relative;}
+.msgItem:after{
+    position: absolute;
+    display: block;
+    content: "";
+    width: 6px;
+    height: 6px;
+    right: 15px;
+    top: 50%;
+    margin-top: -3px;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    border-width: 2px 2px 0 0;
+    border-color: #C8C8CD;
+    border-style: solid;
+}

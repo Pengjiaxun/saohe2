@@ -1,0 +1,31 @@
+/*头部*/
+.portrait img{
+	display:block;
+	margin:1.8rem auto 0;
+	width:3.75rem;
+	height:3.75rem;
+	border-radius:100%;
+}
+.shop_info{
+	color:#888;
+	margin:0.5rem 0.75rem 0.2rem;
+}
+/*中间*/
+
+.weui_cell{
+	background:#fff;
+}
+.weui_btn_primary{
+	background-color:#83267b;
+}
+.weui_btn_primary:not(.weui_btn_disabled):active {
+    color: hsla(0,0%,100%,.4);
+    background-color: #83267b;
+}
+.weui_cell:before{
+	left: 0;
+}
+
+
+
+

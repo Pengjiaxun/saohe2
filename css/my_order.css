@@ -1,0 +1,235 @@
+﻿.ellipsis{display: none;}
+.ellipsis_show + .ellipsis{display: inline-block;}
+.order_time span{margin-left:0.5rem;}
+.order_name,.order_time,.order_name span,.order_time span{
+	font-size:0.7rem;
+	color:#999!important;
+}
+.order_name img{
+	vertical-align:middle;
+	width:0.8rem;
+	height:0.8rem;
+	 margin-top: -4px;
+
+}
+.main_img img{
+	margin-right:0.75rem;
+	width:3rem;
+	height:3rem;
+}
+.main_title{
+	position:absolute;
+	line-height:1rem;
+	top:0.5rem;
+	font-size:0.85rem;
+	margin-right:2rem;
+	color:#000;
+    text-overflow:ellipsis;
+     overflow:hidden;
+     white-space:nowrap;
+     width:13.5rem;
+}
+.main_mini{
+	position:absolute;
+	bottom:0.5rem;
+	width: 8.5rem;
+	height: 1.2rem;
+	overflow:hidden;
+}
+.main_mini img{
+	width:1.2rem;
+	height:1.2rem;
+	margin-bottom:0;
+}
+.detail{
+	position:absolute;
+	bottom:0.5rem;
+	right:0.75rem;
+}
+.detail a{
+	font-size:0.7rem;
+	color:#1418AB;
+}
+.order_total{
+	color:#999;
+	line-height:1.5rem;
+	font-size:0.7rem;
+}
+.order_total .big{
+	padding-left:0.75rem;
+	font-size:1.25rem;
+}
+.order_total .min{
+	font-size:0.6rem;
+    margin-left:-0.3rem;
+}
+.btns input{
+	font-size:0.7rem;
+
+}
+.btns .canel{
+	display: inline-block;
+    text-align: center;
+	width:3.75rem;
+	height:1.4rem;
+	line-height:1.4rem;
+	border:1px solid #999;
+	font-size: 0.7rem;
+	color:#999;
+	border-radius:0.15rem;
+	background:#fff;
+}
+.btns .pay{
+	display: inline-block;
+    text-align: center;
+	width:3.75rem;
+	height:1.4rem;
+	line-height:1.4rem;
+	border:1px solid #83267b;
+	background-color:#83267b;
+	font-size: 0.7rem;
+	color:#fff;
+	-moz-border-radius: 0.15rem; /* Firefox */
+    -webkit-border-radius: 0.15rem; /* Safari 和 Chrome */
+    border-radius: 0.15rem; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+	margin-left:1rem;
+}
+.btns .cancel{
+	color: #A8A1AB;
+}
+.btns .finish{
+	border:none;
+	background-color: transparent;
+	color: #000000;
+}
+/*弹窗样式*/
+/*余额支付*/
+.money-pay{
+	width:100%;
+	height:2.5rem;
+	background:#44b1d9;
+	border-radius:0.25rem;
+	border: 1px solid #44b1d9;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	margin-bottom:0.75rem;
+
+}
+.money-pay-icon{margin:0 5px 0 15px;width:1.1rem;height:100%;background:url(../images/orderPay/icon_wallet_pay.png) no-repeat center;
+background-size:1.1rem;display:block;}
+.money-pay-title{width:3.4rem;line-height:2.4rem;color:#fff;font-size:0.8rem;}
+.money-pay-input-box{background:white;border-radius:0.15rem;margin:6px 0.5rem 6px 0;height:1.8rem;display:none;}
+.money-pay-input-box input{width:45%;float:left;height:1.8rem;-webkit-box-sizing:border-box;
+	box-sizing:border-box;padding-left:0.15rem;font-size: 0.6rem;color: #333;border: none;border-radius:0.15rem;}
+.money-pay-input-box .leftMoney{width: 55%;padding-right:0.25rem;float:left;height:1.8rem;line-height:1.8rem;-webkit-box-sizing:border-box;
+	box-sizing:border-box;font-size: 0.6rem;color:#999;text-align:right;word-wrap:break-word;word-break:break-all;overflow:hidden;}
+.leftMoney2{height:2.4rem;line-height:2.4rem;color:white;font-size:0.8rem;text-align:right;padding-right:0.5rem}
+/*微信支付*/
+.wx-pay{
+	width:100%;
+	height:2.5rem;
+	background:#44d944;
+	border-radius:0.25rem;
+	border: 1px solid #44d944;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+	margin-bottom:0.75rem;
+
+}
+.wx-pay-icon{margin:0 5px 0 15px;width:1.1rem;height:100%;background:url(../images/orderPay/icon_wechat.png) no-repeat center;
+background-size:1.1rem;display:block;}
+.wx-pay-title{width:5.4rem;line-height:2.4rem;color:#fff;font-size:0.8rem;}
+.wx-pay-input-box{background:white;border-radius:0.15rem;margin:6px 0.5rem 6px 0;height:1.8rem;}
+
+/*支付弹窗密码*/
+.pwd-dialog .ui-dialog-cnt{padding:0 0.75rem;position:relative;padding-bottom:0.5rem;width:13.5rem;}
+.pwd-dialog h1{font-size:0.75rem;text-align:center;padding:0.75rem 0;line-height:1;}
+.pwd-dialog .pwd-box,.pwd-dialog .pwdBtn{width:100%;height:2.2rem;-webkit-box-sizing:border-box;box-sizing:border-box;}
+.pwd-dialog .pwd-box{position:relative;}
+.pwd-dialog #input-cover{position:absolute;top:0;left:0;background-color:red;z-index:2;opacity:0;}
+.pwd-dialog .pwd-box input{width:100%;border-radius:0.15rem;-webkit-box-sizing:border-box;box-sizing:border-box;
+-webkit-appearance:none;padding-left:0.5rem;border:1px solid #1a1a1a;text-align: center;line-height:1.5rem;
+  font-size:1rem;padding:0.25rem 0;letter-spacing: 0.5rem;}
+.pwd-dialog .pwd-box input::-webkit-input-placeholder{font-size:0.75rem;line-height:2.2rem;letter-spacing:2px;text-align:center;}
+.pwd-dialog .pwdBtn{margin:0.6rem auto;}
+.pwd-dialog .pwdBtn button{width:100%;height:100%;border-radius:0.15rem;-webkit-box-sizing:border-box;box-sizing:border-box;
+-webkit-appearance:none;background-color:#999;color:white;}
+.pwd-dialog .pwdBtn button.active{background-color:#5c3264;}
+.pwd-dialog #pwdDiaCloseBtn{width:1.6rem;height:1.6rem;background:url(../images/icon_delete_detail.png) no-repeat center;
+background-size:0.8rem;display: block;position:absolute;top:0px;right:0px;}
+/*提示框*/
+
+/*选择图标*/
+.pay-select-icon{width:2.4rem;height:2.4rem;background:#fff url(../images/icon_select_no.png) no-repeat center;background-size:1rem;
+	display:block;border-radius:0 0.25rem 0.25rem 0;}
+.pay-select-icon.selected{background:#fff url(../images/icon_select_yes.png) no-repeat center;background-size:1rem;}
+
+
+/*
+*底部
+*/
+.orderPay-footer{height:14.5rem;position:fixed;width:100%;z-index:9999;left:0;bottom:0;background:#fff;    box-shadow: 0 -3px 10px #888888;
+-webkit-box-sizing:border-box;box-sizing:border-box;padding:0 0.75rem;-webkit-transform:translateY(1000px);
+-webkit-transition:all 0.5s linear;}
+.btn-gopay{background-color:#83267b;width:100%;height:2.1rem;line-height:2.1rem;text-align:center;font-size:0.8rem;color:#fff;border-radius:0.25rem;
+}
+
+.sec-payment-title {
+    font-size: 0.75rem;
+    color: #999;
+    padding: 0.5rem 0.5rem;
+    /* border-top: 1px solid #ccc; */
+}
+.sec-payment {
+    background: #fff;
+    padding: 0.75rem 0;
+    bottom: 3.2rem;
+}
+/*弹窗动画*/
+@keyframes window_up
+{
+from {bottom: -14.5rem;}
+to {bottom: 0;}
+}
+
+@-moz-keyframes window_up /* Firefox */
+{
+from {bottom: -14.5rem;}
+to {bottom: 0;}
+}
+
+@-webkit-keyframes window_up /* Safari 和 Chrome */
+{
+from {bottom: -14.5rem;}
+to {bottom: 0;}
+}
+
+@-o-keyframes window_up /* Opera */
+{
+from {bottom: -14.5rem;}
+to {bottom: 0;}
+}
+.animate{
+	animation:window_up 1s;
+	-moz-animation:window_up 1s; /* Firefox */
+	-webkit-animation:window_up 1s; /* Safari and Chrome */
+	-o-animation:window_up 1s; /* Opera */
+	animation-fill-mode: forwards;
+	-webkit-animation-fill-mode:forwards;
+}
+/*.orderPay-footer{bottom:-15rem!important;}*/
+.orderPay-footer.show{-webkit-transform:translateY(0px);}
+.ui-dialog-fg{
+	position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5rem;
+    z-index: 99999;
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    background: rgba(0, 0, 0, 0);
+    display:none
+}

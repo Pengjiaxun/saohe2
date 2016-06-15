@@ -1,0 +1,40 @@
+/*头部*/
+.t_top{
+	margin-top:1rem;
+}
+
+/*中间*/
+
+.weui_cell{
+	background:#fff;
+}
+.weui_btn_primary{
+	background-color:#5C3164;
+}
+
+.default{
+	color:#9b9b9b;
+	font-size:0.7rem;
+	margin:0.25rem auto;
+	width:6rem;
+	line-height:0.6rem;
+}
+#icon{
+	display:inline-block;
+	border:1px solid #9b9b9b;
+	border-radius:2px;
+	width:0.6rem;
+	height:0.6rem;
+	margin-right:0.5rem;
+}
+.icons{
+	background:url("../images/icon_select.png") center no-repeat;
+	background-size:0.6rem 0.6rem;
+}
+.weui_btn_primary:not(.weui_btn_disabled):active {
+    color: hsla(0,0%,100%,.4);
+    background-color: #5C3164;
+}
+.weui_cell:before{
+	left:0;
+}

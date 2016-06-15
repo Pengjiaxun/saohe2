@@ -1,0 +1,156 @@
+
+.ellipsis{display: none;}
+.ellipsis_show + .ellipsis{display: inline-block;}
+.order_time span{margin-left:0.5rem;}
+.order_name,.order_time,.order_name span,.order_time span{
+	display:inline-block;
+	font-size:0.7rem;
+	color:#999!important;
+	line-height:2.2rem;
+}
+.weui_cells{margin-bottom:0.5rem!important;}
+.img{
+	vertical-align:middle;
+	width:0.8rem;
+	height:0.8rem;
+}
+.main_img img{
+	margin-right:0.75rem;
+	width:3rem;
+	height:3rem;
+}
+.main_title{
+	position:absolute;
+	line-height:0.8rem;
+	font-size: 0.85rem;
+	top:0.5rem;
+	 text-overflow:ellipsis;
+	 overflow:hidden;
+	 white-space:nowrap;
+	 width:13.5rem;
+}
+
+.order_total,.order_num{
+	color:#999;
+	font-size:0.7rem;
+}
+.order_total .big{
+	padding-left:0.75rem;
+	color:#999;
+}
+.order_state{
+	position:absolute;
+	/*top:2.5rem;*/
+	font-size:0.7rem;
+}
+.order_one,.order_two,.order_three{
+	color:#999;
+
+}
+.space{margin:0 1rem;}
+.order_three{
+	color:#999;
+}
+.order_line{
+	position:absolute;
+	top:3.2rem;
+	left:5.8rem;
+	width:12.5rem;
+	height:0.5rem;
+}
+ .circle{
+	display:inline-block;
+	border-radius:50%;
+	width:0.35rem;
+	height:0.35rem;
+	background:#999;
+	overflow:hidden;
+}
+
+.order_line_left,.order_line_right{
+	display:inline-block;
+	border-top:1px solid #999;
+	width:4.2rem;
+	height:1px;
+	margin:0.1rem -0.3rem;
+}
+
+.btns{
+	position:absolute;
+	top:0.6rem;
+	right:0.75rem;
+	display:inline-block;
+	width:3.75rem;
+	height:1.5rem;
+	line-height:1.5rem;
+	background:#83267b;
+	color:#fff;
+	border-radius:0.15rem;
+	text-align:center;
+	font-size:0.7rem;
+}
+/*买家撤销状态*/
+.order_delet{
+	line-height:2.2rem;
+	font-size:0.85rem;
+}
+.title_delet{
+	color:#999;
+}
+.order_img_delet img{
+	width:1.25rem;
+	height:1.25rem;
+	border-radius:50%;
+	vertical-align:middle;
+	margin-right:0.25rem;
+}
+/*待厂家发货状态*/
+.no_send .order_one{
+	color:#000;
+}
+.no_send .circle_one{
+	background:#00C335;
+}
+.order_img_nosend img{
+	width:1.25rem;
+	height:1.25rem;
+	border-radius:50%;
+	-webkit-border-radius:50%;
+	vertical-align:middle;
+	margin-right:0.25rem;
+}
+/*厂家已发货状态*/
+.send .circle_one,.send .circle_two{
+	background:#00C335;
+}
+.send .order_line_left{
+	border-top:1px solid #00C335;
+}
+.send .order_one,.send .order_two{
+	color:#000;
+}
+.order_img_send img{
+	width:1.25rem;
+	height:1.25rem;
+	border-radius:50%;
+	-webkit-border-radius:50%;
+	vertical-align:middle;
+	margin-right:0.25rem;
+}
+/*客户已签收状态*/
+.sign .order_one,.sign .order_two,.sign .order_three{
+	color:#000;
+}
+.sign .order_line_left,.sign .order_line_right{
+	border-top:1px solid #00C335;
+}
+.sign .circle_one,.sign .circle_two,.sign .circle_three{
+	background:#00C335;
+}
+.order_img_sign img{
+	width:1.25rem;
+	height:1.25rem;
+	border-radius:50%;
+	vertical-align:middle;
+	margin-right:0.25rem;
+}

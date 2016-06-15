@@ -1,0 +1,62 @@
+.accountInfo{
+	background-color:#ffffff;
+	margin:0.75rem 0;
+}
+.accountItem{
+	color:#000000;
+	font-size:0.85rem;
+	height:1.475rem;
+	/*font-weight:bold;*/
+	padding:0.75rem;
+	border-top:1px solid #DDDDDD;
+	box-sizing:content-box;
+}
+p,p span{
+	color:#888888;
+	font-size:0.65rem;
+	text-align:center;
+}
+.lp{margin-top: 0.3rem;}
+
+.btn{margin-top: 1rem;margin-bottom: 2.6rem;}
+.accountItem label {
+	font-size:0.85rem;
+    height: 1.3rem;
+    line-height: 1.3rem;
+    width: 4.5rem;
+    display: inline-block;
+}
+.inputbox input{
+	height: 1.3rem;
+    line-height: 1.3rem;
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+::-webkit-input-placeholder { /* WebKit browsers */ 
+	font-size:0.8rem;
+	color: #B2B2B2; 
+} 
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */ 
+	font-size:0.8rem;
+	color: #B2B2B2; 
+} 
+::-moz-placeholder { /* Mozilla Firefox 19+ */ 
+	font-size:0.8rem;
+	color: #B2B2B2; 
+} 
+:-ms-input-placeholder { /* Internet Explorer 10+ */ 
+	font-size:0.8rem;
+	color: #B2B2B2; 
+} 
+.sendBtn{
+	display: block;
+	min-width: 3rem;
+	height: 1.5rem;
+	line-height: 1.5rem;
+	color: #5C3164;
+	font-size: 0.65rem;
+	text-align: center;
+	border-radius: 5px;
+	border:1px solid #5C3164;
+}

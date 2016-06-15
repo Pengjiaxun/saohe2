@@ -1,0 +1,177 @@
+/*悬浮层*/
+.xuanfu{
+	width:100%;
+	height:2.2rem;
+	background:#3F4044;
+	position:fixed;
+	left:0;
+	top:0;
+	padding:0 0.75rem;
+	z-index: 2;
+}
+.x_cancel{
+	background:url("../images/icon_delete.png") center no-repeat;
+	background-size:0.8rem 0.8rem;
+    width: 2.2rem;
+    height: 2.2rem;
+    position: absolute;
+    left: 0;
+    /*bottom: 0;*/
+}
+.x_sao{
+	position:absolute;
+	/*margin-left:3.2rem;*/
+	top:0.2rem;
+	width:1.75rem;
+	height:1.75rem;
+	background:#83267b;
+	border:1px solid rgba(255,255,255,0.6);
+	border-radius:0.2rem;
+	color:#fff;
+	text-align:center;
+	line-height:1.7rem;
+	box-sizing: border-box;
+}
+.x_title{
+	position:absolute;
+	margin-left:2.5rem;
+	top:0.25rem;
+}
+
+.x_title .title2{
+	font-size:0.6rem;
+	color: white;
+}
+.x_down{
+	position:absolute;
+	top:0.3rem;
+	right:0.75rem;
+	background:#83267b;
+	border:1px solid rgba(255,255,255,0.6);
+    -moz-border-radius: 0.2rem; /* Firefox */
+    -webkit-border-radius: 0.2rem; /* Safari 和 Chrome */
+    border-radius: 0.2rem; /* Opera 10.5+, 以及使用了IE-CSS3的IE浏览器 */
+	width:4rem;
+	height:1.5rem;
+	color:#fff;
+	text-align:center;
+	line-height:1.5rem;
+	font-size:0.8rem;
+
+}
+.title1{
+	font-size: 0.75rem;
+	color: white;
+	margin-bottom: -0.2rem;
+}
+/*轮播图*/
+.ui-slider{padding-top: 42.5%;}
+.ui-slider-content a{display:inline-block;width:100%;}
+.ui-slider-content a img{height:8rem;margin:0 0;background-position:cover; }
+.ui-slider-indicators{-webkit-box-pack:center;box-pack:center;right:0;}
+
+/*商品列表*/
+.pro-list {
+    padding: 0px 0.25rem 10rem;
+}
+.recommend h1 {
+    height: 1.3rem;
+    line-height: 1.3rem;
+    font-size: 0.75rem;
+    color: #000000;
+    background-size: 0.75rem;
+    margin-bottom: -0.5rem;
+}
+.newPub h1 {
+    height: 1.3rem;
+    line-height: 1.3rem;
+    font-size: 0.75rem;
+    color: #000000;
+    background-size: 0.75rem;
+    margin-top: 0.5rem;
+    margin-bottom: -0.5rem;
+}
+.pro-list .list-item:nth-child(2n+1) {
+    padding-right: 0.25rem;
+}
+.pro-list .list-item {
+    width: 50%;
+    margin-top: 0.5rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+}
+.pro-list .list-item-box .list-item-t1 {
+    padding: 0.25rem 0.25rem 0;
+    color: #000000;
+    line-height: 0.9rem;
+    font-size: 0.75rem;
+}
+.pro-list .list-item-box {
+    position: relative;
+    background: white;
+    padding-bottom: 0.7rem;
+    overflow: hidden;
+}
+.list-item-img{
+    padding:0.25rem;
+}
+.list-item-img img {
+    height:8.4rem;
+    width: 100%;
+    display: block;
+}
+.pro-list .list-item-box .list-item-price {
+    font-size: 0.75rem;
+    padding-top: 0.3rem;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: #c60a1e;
+    position:relative;
+}
+.list-item-price .old-price {
+    text-decoration: line-through;
+    font-size: 0.75rem;
+    color: #999;
+}
+.downbtn{
+    margin-left: 2.2rem;
+}
+.list-item-price .price_min{
+    font-size:0.4rem;
+}
+.list-item-price em{
+    font-size:0.9rem;
+    margin-right:5px;
+}
+.list-item{
+    position:relative;
+}
+.addbuy{
+    position:absolute;
+    display:block;
+    border:1px solid #000000;
+    border-radius:1.1rem;
+    width:2.9rem;
+    height:1.1rem;
+    line-height:1.1rem;
+    text-align:center;
+    font-size:0.7rem;
+    top:10.85rem;
+    right:0.01rem;
+    margin:0.5rem;
+}
+/*店铺预览*/
+.preinfo{
+    display: block;
+    text-align: center;
+    width: 90%;
+    height: 40px;
+    line-height: 40px;
+    color: #ffffff;
+    margin: 100px auto;
+    border: 3px solid #ffffff;
+}
+#wxShare{
+    display: block;
+}

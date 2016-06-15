@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="cardspay.cn">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>我的购买</title>
+    <link rel="stylesheet" href="css/weui.min.css">
+    <link rel="stylesheet" href="frozenui-1.3.0/css/frozen.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+    <link rel="stylesheet" type="text/css" href="css/diary.css">
+    </head>
+<body class="myorder">
+    <div class="header">
+        <div class="headItem waitpay"><i class="newtip"></i>待付款</div>
+        <div class="headItem on paid">已付款</div>
+    </div>
+    <section>
+    <img src="images/paidnone.png" alt="placeholder+image">
+    <p>所有购买成功的商品将显示在这里</p>
+    <button class="smbtn">前去 买买买</button>
+</section>
+<script src="frozenui-1.3.0/lib/zepto.min.js"></script>
+<script src="frozenui-1.3.0/js/frozen.js"></script>
+<script src="js/rem.js"></script>
+<script type="text/javascript">
+    $(".headItem").tap(function(){
+            $(this).addClass('on').siblings().removeClass('on');
+    });
+    $(".waitpay").tap(function(){
+            location.href="myorder_waitpaidnone.html";
+        });
+</script>
+</body>
+</html>

@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="cardspay.cn">
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0"/>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>订单明细</title>
+        <link rel="stylesheet" href="css/weui.min.css">
+        <link rel="stylesheet" href="frozenui-1.3.0/css/frozen.css">
+        <link rel="stylesheet" type="text/css" href="css/order_detail_nopay.css">
+        <link rel="stylesheet" type="text/css" href="css/common.css">
+    </head>
+<body>
+<!-- 不可编辑的地址 -->
+ <div class="weui_cells weui_cells_access">
+    <a href="javascript:;" class="vg-list-item_no vg-flex-wrap" >
+        <div class="vg-flex-item vg-list-cons">
+            <div class="bill vg-flex-item vg-list-cons">南山区学府路与科园路交汇处卫星大厦705</div>
+            <div class="bill_bottom vg-flex-item vg-list-cons fl address_name">许桐</div>
+            <div class="bill_bottom vg-flex-item vg-list-cons fl tel">17051127749</div>
+            <div class="bill_bottom vg-flex-item vg-list-cons fr spe">默认地址</div>
+        </div>
+    </a>
+</div>
+<section class="order_detail_content">
+    <div class="weui_cells">
+        <div class="weui_cell">
+            <div class="weui_cell_bd weui_cell_primary">
+                <div class="order_name"> 骚盒旗舰店
+                   <a href="shop_card.html"><img src="images/icon_shop_msg_purple.png"></a>
+                </div>
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="main_img fl"><img src="images/my_order/main.png"></div>
+            <div class="main_info fr">
+                <div class="main_title">aotu户外分体式气炉 炉头防风 便携式野餐炉具 野炊灶具炊具装备</div>
+                <div class="wrap_leave">
+                    <div class="leave_img fl">
+                        <img src="images/leave-message-no.jpg">
+                    </div>
+                    <a href="javascrip:" class="leave_btn">留言</a>
+                   <div class="input_leave fl">
+                       <input type="text" class="leave_message" maxlength="16"  placeholder="买家留言，填写您对卖家的要求填写您对卖家的要求">
+                   </div>
+                </div>
+                <div class="price">249</div>
+                <div class="num">x 1</div>
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="main_img fl"><img src="images/my_order/main.png"></div>
+            <div class="main_info fr">
+                <div class="main_title">aotu户外分体式气炉 炉头防风 便携式野餐炉具 野炊灶具炊具装备</div>
+                <div class="wrap_leave">
+                    <div class="leave_img fl">
+                        <img src="images/leave-message-no.jpg">
+                    </div>
+                    <a href="javascrip:" class="leave_btn">留言</a>
+                   <div class="input_leave fl">
+                       <input type="text" class="leave_message" maxlength="16"  placeholder="买家留言，填写您对卖家的要求填写您对卖家的要求">
+                   </div>
+                </div>
+                <div class="price">249</div>
+                <div class="num">x 1</div>
+            </div>
+        </div>
+
+        <div class="weui_cell">
+            <div class="main_img fl"><img src="images/my_order/main.png"></div>
+            <div class="main_info fr">
+                <div class="main_title">aotu户外分体式气炉 炉头防风 便携式野餐炉具 野炊灶具炊具装备</div>
+                <div class="wrap_leave">
+                    <div class="leave_img fl">
+                        <img src="images/leave-message-no.jpg">
+                    </div>
+                    <a href="javascrip:" class="leave_btn">留言</a>
+                   <div class="input_leave fl">
+                   <div class="leave_message_s">尽快发货，尽快发货尽快发货，尽快发货，尽快发货</div>
+                   </div>
+                </div>
+                <div class="price">249</div>
+                <div class="num">x 1</div>
+            </div>
+        </div>
+        <div class="weui_cell">
+            <div class="main_img fl"><img src="images/my_order/main.png"></div>
+            <div class="main_info fr">
+                <div class="main_title">aotu户外分体式气炉 炉头防风 便携式野餐炉具 野炊灶具炊具装备</div>
+                <div class="price">249</div>
+                <div class="num">x 1</div>
+            </div>
+        </div>
+
+</section>
+<!--/支付方式-->
+<section class="footer2">
+    <div class="orderPay-footer">
+        <div class="sec-payment">
+           <!--  <div class="total">
+                <div class="t_total">合计 447.00</div>
+            </div> -->
+            <div class="sec-payment-title">可单种支付或多种支付<div class="t_total fr">合计 447.00</div></div>
+            <!--余额支付-->
+            <div class="money-pay vg-flex-wrap">
+                <span class="money-pay-icon"></span>
+                <label for="money" class="vg-flex-item">
+                    <div class="vg-flex-wrap money-pay-box">
+                        <div class="money-pay-title">余额支付</div>
+                        <div class="money-pay-input-box vg-flex-item clearfix" style="display: none;">
+                            <input type="number" placeholder="输入金额" id="money">
+                            <div class="leftMoney">剩142</div>
+                        </div>
+                        <div class="vg-flex-item leftMoney2">剩142</div>
+                    </div>
+                </label>
+                <span class="pay-select-icon money-select selected"></span>
+            </div>
+            <!--微信支付-->
+            <div class="wx-pay vg-flex-wrap">
+                <span class="wx-pay-icon"></span>
+                <label for="" class="vg-flex-item">
+                    <div class="vg-flex-wrap wx-pay-box">
+                        <div class="wx-pay-title">微信安全支付</div>
+                    </div>
+                </label>
+                <span class="pay-select-icon wx-select"></span>
+            </div>
+        </div>
+        <!-- 输入密码弹窗 -->
+        <div class="ui-dialog pwd-dialog">
+            <div class="ui-dialog-cnt">
+                <h1>需支付<em>55.00</em>（剩余555.00）</h1>
+                <span id="pwdDiaCloseBtn"></span>
+                <div class="pwd-box"><input type="password" id="input-show" placeholder="请输入支付密码" maxlength="6" />
+                <input type="text" autofocus="autofocus" id="input-cover" maxlength="6"></div>
+                <div class="pwdBtn"><button>确定</button></div>
+            </div>
+        </div>
+
+        <!--底部-->
+        <div class="btns">
+            <button class="btn-gopay">立即支付</button>
+        </div>
+        <!-- 遮挡下面按钮不能点击 -->
+        <div class="ui-dialog-fg"></div>
+    </div>
+        <div style="width:100%;height:64px;"></div>
+</section>
+
+<script src="js/rem.js"></script>
+<script src="frozenui-1.3.0/lib/zepto.min.js"></script>
+<script src="frozenui-1.3.0/js/frozen.js"></script>
+<script>
+    $(function(){
+       var canClick=false;
+        // 输入密码
+        $("#input-cover")[0].addEventListener("input",function(){
+            var coverVal=$(this).val(),l=coverVal.length;
+            if(l>=6){
+                trueVal=coverVal.substr(0,6);
+                $("#input-show").val(trueVal);
+                canClick=true;
+                $(".pwdBtn button").addClass("active");
+            }else{
+                $("#input-show").val(coverVal);
+                canClick=false;
+                $(".pwdBtn button").removeClass("active");
+            }
+        },false);
+
+
+        // 支付弹窗密码框
+        $(".btn-gopay").tap(function(){
+
+            if(wxSel.hasClass("selected") && !moneySel.hasClass("selected")){
+                $(".money-pay-input-box").hide();
+            }else{
+                $(".ui-dialog").dialog("show");
+            }
+        });
+        $("#pwdDiaCloseBtn").tap(function(){
+            $(".ui-dialog").dialog("hide");
+            $(".pwd-box input").val("");
+        });
+        $(".pwdBtn button").tap(function(){
+            if(canClick){
+                $(".ui-dialog").dialog("hide");
+                var el;
+                el=$.tips({
+                    content:'支付成功',
+                    stayTime:2000,
+                    type:"success"
+                })
+                el.on("tips:hide",function(){
+                    window.location.href="paySuccess.html";
+                })
+            }else{
+
+            }
+
+        });
+
+        // 判断支付
+        var moneySel=$(".money-select"),wxSel=$(".wx-select"),sels=$(".pay-select-icon");
+        sels.tap(function(){
+            $(this).toggleClass("selected");
+            if(moneySel.hasClass("selected") && !wxSel.hasClass("selected")){
+                $(".money-pay-input-box").hide();
+                $(".leftMoney2").show();
+            }else{
+                $(".leftMoney2").hide();
+                $(".money-pay-input-box").show();
+            }
+            //判断都不选择的时候，支付按钮变成灰色,不弹出密码框
+            if(!moneySel.hasClass("selected") && !wxSel.hasClass("selected")){
+                $(".btn-gopay").css("background","#999");
+                $(".ui-dialog-fg").css("display","block");
+            }else{
+                $(".btn-gopay").css("background","#5c3164");
+                 $(".ui-dialog-fg").css("display","none");
+            }
+        });
+
+        //输入框的时候底部遮挡
+        // $("input").focus(function(){
+        //     $(".head-common").css("position","static");
+        //     $(".orderPay-footer").css("bottom","-15rem");
+        // }).blur(function(){
+        //     $(".head-common").css("position","fixed");
+        //     $(".orderPay-footer").css("bottom","0");
+        // });
+        // 清除备注内容
+        // $(".btn-inputClear").tap(function(e){
+        //     e.stopPropagation();
+        //     $(this).parents(".orderPay-list-bd-note").children("input").val("");
+        // })
+    })
+</script>
+</body>
+</html>

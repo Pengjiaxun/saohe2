@@ -1,0 +1,269 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="cardspay.cn">
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0"/>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>购物车</title>
+        <link rel="stylesheet" href="frozenui-1.3.0/css/frozen.css">
+    	<link rel="stylesheet" type="text/css" href="css/common.css">
+        <link rel="stylesheet" type="text/css" href="css/cart.css">
+    </head>
+<body>
+	<!--购物车列表-->
+	<section class="cart-sec">
+		<div class="cart-list">
+			<a href="javascript:void(0);" class="cart-list-hd vg-flex-wrap">
+				<div class="selectIcon shopSelected selected"></div>
+				<div class="shopName vg-flex-item">
+					<span><img src="images/icon_shop_msg_purple.png"></span>
+					<p class="goshop" data-href="index.html">騷骚的小店</p>
+					<i class="fr cartDel">移除</i>
+				</div>
+			</a>
+			<div class="cart-list-bd vg-flex-wrap">
+				<div class="selectIcon proSelected selected"></div>
+				<div class="proImg"><img src="images/p1.jpg" alt=""></div>
+				<div class="proCnt">
+					<h1 class="ui-nowrap-multi">西湖龙井-味道独特，香甜可口</h1>
+					<span class="price">￥31.00</span>
+					<div class="num-box">
+						<span class="num-minus disabled"></span><input type="tel" onkeyup="value=value.replace(/[^0-9]/g,'')" value="1" class="num-input"><span class="num-plus"></span>
+					</div>
+				</div>
+				<i class="proDel"></i>
+			</div>
+			<div class="cart-list-bd vg-flex-wrap">
+				<div class="selectIcon proSelected selected"></div>
+				<div class="proImg"><img src="images/p1.jpg" alt=""></div>
+				<div class="proCnt">
+					<h1 class="ui-nowrap-multi">西湖龙井-味道独特，香甜可口</h1>
+
+					<span class="price">￥31.00</span>
+					<div class="num-box">
+						<span class="num-minus disabled"></span><input type="tel" onkeyup="value=value.replace(/[^0-9]/g,'')" value="1" class="num-input"><span class="num-plus"></span>
+					</div>
+				</div>
+				<i class="proDel"></i>
+			</div>
+			<div class="cart-list-bd vg-flex-wrap">
+				<div class="selectIcon proSelected selected"></div>
+				<div class="proImg"><img src="images/p1.jpg" alt=""></div>
+				<div class="proCnt">
+					<h1 class="ui-nowrap-multi">西湖龙井-味道独特，香甜可口</h1>
+
+					<span class="price">￥31.00</span>
+					<div class="num-box">
+						<span class="num-minus disabled"></span><input type="tel" onkeyup="value=value.replace(/[^0-9]/g,'')" value="1" class="num-input"><span class="num-plus"></span>
+					</div>
+				</div>
+				<i class="proDel"></i>
+			</div>
+		</div>
+		
+    </section><!--/sec-cart-->
+	<!--底部按钮：结算-->
+	<div class="footer-btn vg-flex-wrap">
+		<div class="selectIcon"></div>
+		<div class="footer-summary vg-flex-item">
+			<h1>合计：￥18821.00</h1>
+		</div>
+		<a href="order_detail.html" class="btn-buy">去结算<span></span></a>
+	</div>
+	<!--底部按钮：删除-->
+	<div class="footer-btn2 vg-flex-wrap">
+		<div class="selectIcon"></div>
+		<div class="footer-cnt vg-flex-item">
+			全选
+		</div>
+		<div class="btn-del"><button>删除</button></div>
+	</div>
+
+	<!--微信分享指引弹窗-->
+	<!-- <div class="wx-share">
+		<img src="images/upload/item-img.png" width="100%" />
+	</div> -->
+	<!--弹窗-->
+	<script src="frozenui-1.3.0/lib/zepto.min.js"></script>
+    <script src="frozenui-1.3.0/js/frozen.js"></script>
+    <script src="js/rem.js"></script>
+<script type="text/javascript">
+	$(function(){
+		//微信分享指引
+		// $(".head-share").tap(function(){
+		// 	$(".wx-share").show();
+		// });
+		// $(".wx-share").tap(function(){
+		// 	$(this).hide();
+		// });
+		//店铺跳转
+		$(".goshop").tap(function(){
+			if($(this).data('href')){
+                location.href= $(this).data('href');
+            }
+		});
+		//移除按钮
+		$(".cartDel").tap(function(){
+			$(this).parents(".cart-list").hide();
+		});
+		//删除按钮
+		var tag=false;
+		$(".proDel").tap(function(){
+			$(this).parent().hide();
+			if($(this).parent().parent().find(".shopSelected").hasClass("selected")){
+				$(this).parent().parent().hide();
+			}
+		});
+		//全选
+		var all=false,allSe=$(".cart-list .selectIcon"),allBtn=$(".footer-btn .selectIcon"),allDelBtn=$(".footer-btn2 .selectIcon");
+		// 检查全选
+		function checkAll(){
+			var sum=0;
+			for(var i=0;i<allSe.length;i++){
+				if($(allSe[i]).hasClass("selected")){
+					sum++;
+				}
+			}
+			if(allSe.length==sum){
+				all=true;
+			}else{
+				all=false;
+			}
+		}
+		// 检查每个店选框勾选还是去掉
+		function checkShop(that){
+			var s=that.parents(".cart-list").children().children(".proSelected").size();
+			var obj=that.parents(".cart-list").children().children(".proSelected");
+			var n=0;
+			if(that.hasClass("selected")){
+				for(var i=0;i<s;i++){
+					if($(obj[i]).hasClass("selected")){
+						n+=1;
+					}
+				}
+				if(n==s){
+					that.parents(".cart-list").children().children(".shopSelected").addClass("selected");
+				}else{
+					that.parents(".cart-list").children().children(".shopSelected").removeClass("selected");
+				}
+			}else{
+				that.parents(".cart-list").children().children(".shopSelected").removeClass("selected");
+			}
+
+		}
+		allBtn.tap(function(){//全选付款
+			checkAll();
+			if(!all){
+				$(this).addClass("selected");
+				allSe.addClass("selected");
+				$(".proDel").css("visibility","visible");
+				all=false;
+			}else{
+				$(this).removeClass("selected");
+				allSe.removeClass("selected");
+				$(".proDel").css("visibility","hidden");
+				all=true;
+			}
+		});
+		allDelBtn.tap(function(){//全选删除
+			checkAll();
+			if(!all){
+				$(this).addClass("selected");
+				allSe.addClass("selected");
+				all=false;
+			}else{
+				$(this).removeClass("selected");
+				allSe.removeClass("selected");
+				all=true;
+			}
+		});
+		//每个单选点击
+		allSe.tap(function(e){
+			e.preventDefault();
+			var that=$(this);
+			$(this).toggleClass("selected");
+			if($(this).hasClass("selected")){
+				$(this).parent().children(".proDel").css("visibility","visible");
+			}else{
+				$(this).parent().children(".proDel").css("visibility","hidden");
+			}
+			if(that.hasClass("shopSelected")){
+				if(that.hasClass("selected")){
+					that.parents(".cart-list").children().children(".selectIcon").addClass("selected");
+					that.parents(".cart-list").children().children(".proDel").css("visibility","visible");
+				}else{
+					that.parents(".cart-list").children().children(".selectIcon").removeClass("selected");
+					that.parents(".cart-list").children().children(".proDel").css("visibility","hidden");
+				}
+				checkAll();
+				if(all){
+					allBtn.addClass("selected");
+					allDelBtn.addClass("selected");
+					all=false;
+				}else{
+					allBtn.removeClass("selected");
+					allDelBtn.removeClass("selected");
+					all=true;
+				}
+			}else{
+				checkShop(that);
+				checkAll();
+				if(all){
+					allBtn.addClass("selected");
+					allDelBtn.addClass("selected");
+					all=false;
+				}else{
+					allBtn.removeClass("selected");
+					allDelBtn.removeClass("selected");
+					all=true;
+				}
+			}
+
+		});
+		//编辑
+		var edit=true;
+		$(".head-edit").tap(function(){
+			checkAll();
+			if(all){
+				allBtn.addClass("selected");
+				allDelBtn.addClass("selected");
+				all=false;
+			}else{
+				allBtn.removeClass("selected");
+				allDelBtn.removeClass("selected");
+				all=true;
+			}
+			if(edit){
+				$(this).text("完成");
+				//$(".cart-list .selectIcon").removeClass("selected");
+				$(".footer-btn").hide();
+				$(".footer-btn2").css("display","-webkit-box");
+				edit=false;
+			}else{
+				$(this).text("编辑");
+				//$(".cart-list .selectIcon").removeClass("selected");
+				$(".footer-btn2").hide();
+				$(".footer-btn").css("display","-webkit-box");
+				edit=true;
+			}
+
+		});
+		//删除订单
+		$(".btn-del").tap(function(){
+			for(var i=0;i<allSe.length;i++){
+				if($(allSe[i]).hasClass("proSelected") && $(allSe[i]).hasClass("selected")){
+					$(allSe[i]).parents(".cart-list-bd").remove();
+				}
+				if($(allSe[i]).hasClass("shopSelected") && $(allSe[i]).hasClass("selected")){
+					$(allSe[i]).parents(".cart-list").remove();
+				}
+			}
+
+		});
+	});
+</script>
+</body>
+</html>

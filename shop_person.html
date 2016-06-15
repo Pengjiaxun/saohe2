@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="cardspay.cn">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<title>旗舰店</title>
+	<link rel="stylesheet" href="frozenui-1.3.0/css/frozen.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/shop_person.css">
+</head>
+<body>
+<header>
+    <div class="bg_top">
+        <div class="portrait">
+        	<img src="images/icon_portrait.png" alt="">
+	        <div class="shop_title">
+	            <p class="title">
+	                骚盒店铺号店铺骚盒店铺号
+	            </p>
+	        </div>
+        </div>
+    </div>
+</header>
+
+	<!--商品列表-->
+	<div class="pro-list">
+		<!-- 店长推荐 -->
+		<div class="recommend">
+			<h1>店长推荐</h1>
+			<div class="list list-recommend clearfix">
+				<div class="list-item fl">
+					<a href="product_detail.html">
+						<div class="list-item-box">
+							<div class="list-item-img">
+								<img src="images/p1.jpg"></div>
+							<h2 class="ui-nowrap-multi ui-whitespace list-item-t1">2015新脐橙10斤装，赣南信丰脐橙，天下脐橙之乡！</h2>
+							<p class="list-item-price"><em>239.00</em><span class="price_min">元</span>
+							</p>
+						</div>
+					</a>
+					<button class="addbuy">购买</button>
+				</div>
+				<div class="list-item fl">
+					<a href="product_detail.html">
+						<div class="list-item-box">
+							<div class="list-item-img">
+								<img src="images/p1.jpg" height="168" width="168%"></div>
+							<h2 class="ui-nowrap-multi ui-whitespace list-item-t1">2015新脐橙10斤装，赣南信丰脐橙，天下脐橙之乡！</h2>
+							<p class="list-item-price"><em>239.00</em><span class="price_min">元</span>
+							</p>
+						</div>
+					</a>
+					<button class="addbuy">购买</button>
+				</div>
+			</div>
+		</div>
+		<!--新品上架-->
+		<div class="newPub">
+			<h1>新品上架</h1>
+			<div class="list list-newPub clearfix">
+				<div class="list-item fl">
+					<a href="product_detail.html">
+						<div class="list-item-box">
+							<div class="list-item-img">
+								<img src="images/p1.jpg" height="168" width="168%"></div>
+							<h2 class="ui-nowrap-multi ui-whitespace list-item-t1">2015新脐橙10斤装，赣南信丰脐橙，天下脐橙之乡！</h2>
+							<p class="list-item-price"><em>239.00</em><span class="price_min">元</span>
+							</p>
+						</div>
+					</a>
+					<button class="addbuy">购买</button>
+				</div>
+				<div class="list-item fl">
+					<a href="product_detail.html">
+						<div class="list-item-box">
+							<div class="list-item-img">
+								<img src="images/p1.jpg" height="168" width="168%"></div>
+							<h2 class="ui-nowrap-multi ui-whitespace list-item-t1">2015新脐橙10斤装，赣南信丰脐橙，天下脐橙之乡！</h2>
+							<p class="list-item-price"><em>239.00</em><span class="price_min">元</span>
+							</p>
+						</div>
+					</a>
+					<button class="addbuy">购买</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--商品-->
+	<!-- 悬浮购物车图标 -->
+	<div id="cartIcon">
+		<a href="cart.html">
+			<div class="img"></div>
+		</a>
+		<span class="buynum">1</span>
+	</div>
+	<footer class="footer">
+		<a href="shop_person.html" class="active"> <i class="footerItem3"></i>
+			我的店铺
+		</a>
+		<a href="shop_message_person.html" class=""> <i class="footerItem2"></i>
+			个人中心
+		</a>
+	</footer>
+	<script src="frozenui-1.3.0/lib/zepto.min.js"></script>
+	<script src="frozenui-1.3.0/js/frozen.js"></script>
+	<script src="js/rem.js"></script>
+	<script>
+    $(function(){
+        //点击购买的时候，添加数字到购物车
+        $(".addbuy").tap(function(){
+        	var val=$("#cartIcon").find(".buynum").text();
+        	if(val<99){
+        		val++;
+        		$("#cartIcon").find(".buynum").text(val++);
+            }else{
+            	$("#cartIcon").find(".buynum").text("...")
+            }
+        });
+    });
+    </script>
+</body>
+</html>

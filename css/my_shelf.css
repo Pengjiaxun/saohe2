@@ -1,0 +1,124 @@
+section{margin-top:2.5rem;}
+#up_shelf,#down_shelf{
+	display:none;
+}
+
+.weui_cell{
+	height:5rem;
+	background-color: #fff;
+}
+.main_img img{
+	position:absolute;
+	margin-right:0.75rem;
+	width:3rem;
+	height:3rem;
+	top:0.5rem;
+	left:0.75rem;
+}
+
+.main_title{
+	position:absolute;
+	top:0.5rem;
+	left:4.5rem;
+	font-size:0.8rem;
+}
+.incom_info{
+	margin-left:-4rem;
+	position:absolute;
+	bottom:0.5rem;
+	left:50%;
+	color:#999;
+	font-size:0.7rem;
+}
+.incom_info .retail{
+	margin-right:0.5rem;
+	color:#999;
+}
+.retail span,.incom .big{
+	font-size:0.9rem;
+	color:#999;
+}
+.incom,.incom span{color:#999;}
+.down_shelf_btn{
+	position:absolute;
+	bottom:0.5rem;
+	right:0.75rem;
+	width:3rem;
+	height:1.5rem;
+	line-height:1.5rem;
+	border:1px solid #000;
+	border-radius:0.15rem;
+	background:#fff;
+	text-align:center;
+	font-size:0.7rem;
+	background:#fff;
+}
+.order_total .big{
+	padding-left:0.75rem;
+	font-size:1.25rem;
+}
+.order_total .min{
+	font-size:0.6rem;
+}
+.remove{
+	color:#BB3E07;
+	border:1px solid #BB3E07;
+}
+.spe{
+	right:4.3rem;
+	width:4.2rem;
+}
+.weui_cells:before {border:1px solid #fff;}
+.weui_cell:before{left: 0;}
+
+.filter{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 184px;
+	z-index: 100000;
+	display: none;
+	background-color: #fff;
+	font-family: "微软雅黑";
+}
+.filter div{
+	height: 46px;
+	line-height: 46px;
+	padding:0 12px;
+}
+
+.filter .cancel{
+	display: inline-block;
+	width: 21px;
+	height: 46px;
+	line-height: 46px;
+	background:url(../images/delete02.png) center no-repeat;
+	-webkit-background-size: 12px 12px;
+	background-size: 12px 12px;
+}
+.filter .filter_title_wrap{
+	border-bottom:1px solid #80277e;
+}
+.filter .filter_title{
+	font-size: 16px;
+	color: #7f277d;
+}
+.filter .filter_condition{
+	border-bottom: 1px solid #ccc;
+}
+.filter .filter_condition:last-child{
+	border-bottom:none;
+}
+.filter .filter_condition .filter_icon{
+	float: right;
+	display: inline-block;
+	width: 13px;
+	height: 46px;
+	visibility:hidden;
+	line-height: 46px;
+	background: url(../images/filter_chose.png) center no-repeat;
+	-webkit-background-size: 13px 9px;
+	background-size: 13px 9px;
+}
+#cartIcon{z-index: 2;}
+.filter .show .filter_icon{visibility:visible;}

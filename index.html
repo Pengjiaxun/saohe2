@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="cardspay.cn">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<title>旗舰店</title>
+	<link rel="stylesheet" href="frozenui-1.3.0/css/frozen.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript">
+
+	function getCookie(c_name)
+	{
+		if (document.cookie.length>0)
+		{
+			c_start=document.cookie.indexOf(c_name + "=");
+			if (c_start!=-1)
+			{
+			c_start=c_start + c_name.length+1 ;
+			c_end=document.cookie.indexOf(";",c_start);
+			if (c_end==-1) c_end=document.cookie.length;
+			return unescape(document.cookie.substring(c_start,c_end));
+			}
+		}
+		return "";
+	}
+
+	function setCookie(c_name,value,expiredays)
+	{
+		var exdate=new Date();
+		exdate.setDate(exdate.getDate()+expiredays);
+		document.cookie=c_name+ "=" +escape(value)+
+		((expiredays==null) ? "" : "; expires="+exdate.toGMTString());
+	}
+
+	function checkCookie()
+	{
+		username=getCookie('username');
+		if (username!=null && username!="")
+		{console.log(username);document.getElementById("header").style.display="none";}
+		else
+		{console.log(username);document.getElementById("header").style.display="block";}
+	}
+</script>
+</head>
+<body>
+	<!-- 悬浮层 -->
+	<header id="header">
+		<div class="xuanfu vg-flex-wrap">
+			<div class="x_cancel vg-flex-item"></div>
+			<div class="downbtn">
+				<img class="x_sao vg-flex-item" src="images/logo.png" alt="">
+				<div class="x_title vg-flex-item">
+					<p class="title1">骚盒</p>
+					<p class="title2">一个会赚钱的购物车</p>
+				</div>
+				<div class="x_down vg-flex-item">下载</div>
+			</div>
+		</div>
+	</header>
+	<script>checkCookie();</script>
+	<!-- 轮播图 -->
+	 <div class="ui-slider banner">
+    	<ul class="ui-slider-content" style="width: 500%">
+	        <li><a href="##"><img src="images/banner_sun.png"/></a></li>
+	        <li><a href="##"><img src="images/banner_sun.png"/></a></li>
+	        <li><a href="##"><img src="images/banner_sun.png"/></a></li>
+	        <li><a href="##"><img src="images/banner_sun.png"/></a></li>
+	        <li><a href="##"><img src="images/banner_sun.png"/></a></li>
+
+	    </ul>
+	</div><!--/ui-slider-->
+
+	<!--商品列表-->
+	<div class="pro-list">
+		<!-- 店长推荐 -->
+		<div class="recommend">
+			<h1>店长推荐</h1>
+			<div class="list list-recommend clearfix">
+				<div class="list-item fl">
+					<a href="product_detail.html">
+						<div class="list-item-box">
+							<div class="list-item-img">
+								<img src="images/p1.jpg"></div>
+							<h2 class="ui-nowrap-multi ui-whitespace list-item-t1">2015新脐橙10斤装，赣南信丰脐橙，天下脐橙之乡！</h2>
+							<p class="list-item-price"><em>239.00</em><span class="price_min">元</span>
+							</p>
+						</div>
+					</a>
+					<button class="addbuy">购买</button>
+				</div>
+				<div class="list-item fl">
+					<a href="product_detail.html">
+						<div class="list-item-box">
+							<div class="list-item-img">
+								<img src="images/p1.jpg" height="168" width="168%"></div>
+							<h2 class="ui-nowrap-multi ui-whitespace list-item-t1">2015新脐橙10斤装，赣南信丰脐橙，天下脐橙之乡！</h2>
+							<p class="list-item-price"><em>239.00</em><span class="price_min">元</span>
+							</p>
+						</div>
+					</a>
+					<button class="addbuy">购买</button>
+				</div>
+			</div>
+		</div>
+		<!--新品上架-->
+		<div class="newPub">
+			<h1>新品上架</h1>
+			<div class="list list-newPub clearfix">
+				<div class="list-item fl">
+					<a href="product_detail.html">
+						<div class="list-item-box">
+							<div class="list-item-img">
+								<img src="images/p1.jpg" height="168" width="168%"></div>
+							<h2 class="ui-nowrap-multi ui-whitespace list-item-t1">2015新脐橙10斤装，赣南信丰脐橙，天下脐橙之乡！</h2>
+							<p class="list-item-price"><em>239.00</em><span class="price_min">元</span>
+							</p>
+						</div>
+					</a>
+					<button class="addbuy">购买</button>
+				</div>
+				<div class="list-item fl">
+					<a href="product_detail.html">
+						<div class="list-item-box">
+							<div class="list-item-img">
+								<img src="images/p1.jpg" height="168" width="168%"></div>
+							<h2 class="ui-nowrap-multi ui-whitespace list-item-t1">2015新脐橙10斤装，赣南信丰脐橙，天下脐橙之乡！</h2>
+							<p class="list-item-price"><em>239.00</em><span class="price_min">元</span>
+							</p>
+						</div>
+					</a>
+					<button class="addbuy">购买</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--商品-->
+	<!-- 悬浮购物车图标 -->
+	<div id="cartIcon">
+		<a href="cart.html">
+			<div class="img"></div>
+		</a>
+		<span class="buynum">1</span>
+	</div>
+	<footer class="footer">
+		<a href="index.html" class="active"> <i class="footerItem1"></i>
+			旗舰店
+		</a>
+		<a href="shop_message.html" class=""> <i class="footerItem2"></i>
+			个人中心
+		</a>
+	</footer>
+	<script src="frozenui-1.3.0/lib/zepto.min.js"></script>
+	<script src="frozenui-1.3.0/js/frozen.js"></script>
+	<script src="js/rem.js"></script>
+	<script>
+	//<!-- 轮播图js -->
+	(function(){
+	    var slider = new fz.Scroll('.ui-slider', {
+	        role: 'slider',
+	        indicator: true,
+	        autoplay: true,
+	        interval: 3000
+		});
+	})();
+
+    $(function(){
+
+        $(".footer a").tap(function(){
+                $(this).addClass('active').siblings().removeClass('active');
+            });
+            $(".x_cancel").tap(function(){
+                setCookie('username','pjx',7);
+                $(".xuanfu").css('display','none');
+             });
+            $(".downbtn").tap(function(){
+                location.href="down.html";
+            });
+
+            //点击购买的时候，添加数字到购物车
+            $(".addbuy").tap(function(){
+            	var val=$("#cartIcon").find(".buynum").text();
+            	if(val<99){
+            		val++;
+            		$("#cartIcon").find(".buynum").text(val++);
+	            }else{
+	            	$("#cartIcon").find(".buynum").text("...")
+	            }
+            });
+    });
+    </script>
+</body>
+</html>

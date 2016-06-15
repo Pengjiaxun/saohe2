@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="cardspay.cn">
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0"/>
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <title>转账</title>
+        <link rel="stylesheet" href="frozenui-1.3.0/css/frozen.css">
+        <link rel="stylesheet" type="text/css" href="css/common.css">
+        <link rel="stylesheet" type="text/css" href="css/transfer.css">
+    </head>
+<body>
+    <!-- 转到自己账户 -->
+    <section class="tansfer_info">
+        <h1>转账资料</h1>
+        <div class="tansfer-box">
+            <div class="tansfer-input vg-flex-wrap ui-border-t">
+                <span>对方账号</span>
+                <p class="vg-flex-item">
+                    <input type="tel" maxlength="20" autofocus placeholder="请输入对方账号"></p>
+            </div>
+            <div class="tansfer-input vg-flex-wrap ui-border-t">
+                <span>转账金额</span>
+                <p class="vg-flex-item">
+                    <input type="tel" maxlength="20"  id="money" placeholder="可转账余额:1000"></p>
+            </div>
+        </div>
+        <div class="btns"><button>确定</button></div>
+        <!-- 密码弹窗 -->
+        <div class="wx-share" id="wxShare" style="display:none;"></div>
+        <div class="pswinput">
+            <h1 class="">
+                请输入密码 <i class="" id="close"></i>
+            </h1>
+            <img src="images/p1.jpg" alt="">
+            <p>不哭不艾吗</p>
+            <input id="input" class="" type="password" maxlength="6" onkeyup="input()" />
+            <div class="inputbox">
+                <div class="inputimg fl" index="1"></div>
+                <div class="inputimg fl" index="2"></div>
+                <div class="inputimg fl" index="3"></div>
+                <div class="inputimg fl" index="4"></div>
+                <div class="inputimg fl" index="5"></div>
+                <div class="inputimg fl" index="6"></div>
+            </div>
+        </div>
+    </section>
+    <script src="js/rem.js"></script>
+    <script src="frozenui-1.3.0/lib/zepto.min.js"></script>
+    <script src="frozenui-1.3.0/js/frozen.js"></script>
+    <script type="text/javascript">
+     function input(){
+            // var i=0;
+            // var img=$(".inputimg");
+             var len=$("#input").val().length;
+            // $(".inputimg").hide();
+            // for(;i<len;i++){
+            //     img.eq(i).show();
+            // }
+            if($("#input").val()=="123456"){
+                $("#wxShare,.pswinput").hide();
+            }
+            if(len==6 && $("#input").val()!="123456"){
+                el=$.tips({
+                    content:'密码错误！',
+                    stayTime:1000,
+                    type:"success"
+                });
+                $("#wxShare,.pswinput").hide();
+                $("#input").val("");
+            }
+        }
+    $(function(){
+        $(".btns").click(function(){
+            var cash=$("#money").val();
+            // var pattern=/^\d+(\.\d)?$/;
+            if(cash===""){
+                el=$.tips({
+                    content:'请输入转账金额',
+                    stayTime:1000,
+                    type:"success"
+                });
+            }
+            // else if(!pattern.test(cash)){
+            //     el=$.tips({
+            //         content:'转账金额不正确',
+            //         stayTime:1000,
+            //         type:"success"
+            //     });
+            // }
+            else{
+                $("#wxShare,.pswinput").show();
+            }
+        });
+        $("#input").tap(function(){
+                $(this).addClass('select');
+        });
+        $("#wxShare,#close").tap(function(){
+            $("#wxShare,.pswinput").hide();
+            $("#input").val("");
+            // $("#input").val("");
+            // $(".inputimg").hide();
+        });
+    });
+    </script>
+</body>
+</html>

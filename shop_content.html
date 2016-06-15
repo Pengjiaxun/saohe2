@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="author" content="cardspay.cn">
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0"/>
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<title>店铺信息</title>
+	<link rel="stylesheet" href="css/weui.min.css">
+	<link rel="stylesheet" href="frozenui-1.3.0/css/frozen.css">
+	<link rel="stylesheet" type="text/css" href="css/common.css">
+	<link rel="stylesheet" type="text/css" href="css/shop_content.css"></head>
+<body>
+	<header>
+		<div class="portrait">
+			<img src="images/icon_portrait.png" alt=""></div>
+	</header>
+	<div class="shop_info">基本信息</div>
+	<section class="content">
+		<div class="weui_cell">
+			<div class="weui_cell_hd">
+				<label class="weui_label">店铺名</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<input id="shopname" class="weui_input" type="text" maxlength="20" placeholder="20字以内（必填）"/>
+			</div>
+		</div>
+		<div class="weui_cell">
+			<div class="weui_cell_hd">
+				<label class="weui_label">店铺公告</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<textarea class="weui_textarea" placeholder="50字以内" maxlength="50" rows="3"></textarea>
+			</div>
+		</div>
+	</section>
+	<div class="shop_info">客服信息</div>
+	<section class="content2">
+		<div class="weui_cell">
+			<div class="weui_cell_hd">
+				<label class="weui_label">微信号</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<input class="weui_input" type="text" maxlength="20" placeholder="买家通过微信号与您联系"></div>
+		</div>
+		<div class="weui_cell">
+			<div class="weui_cell_hd">
+				<label class="weui_label">
+					微博号
+					<span style="margin-left:30px">@</span>
+				</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<input class="weui_input" type="text" maxlength="20" placeholder="为您的新浪微博增加粉丝"></div>
+		</div>
+		<div class="weui_cell">
+			<div class="weui_cell_hd">
+				<label class="weui_label">QQ号码</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<input id="qq1" class="weui_input" type="tel" maxlength="11"  placeholder="买家可以添加客服QQ号码"></div>
+		</div>
+	</section>
+	<div class="shop_info">店主信息</div>
+	<section class="content2">
+		<div class="weui_cell">
+			<div class="weui_cell_hd">
+				<label class="weui_label">手机号码</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<input id="phone" class="weui_input" type="tel" maxlength="11" placeholder="买家通过手机号与您联系" />
+			</div>
+		</div>
+		<div class="weui_cell">
+			<div class="weui_cell_hd">
+				<label class="weui_label">QQ号码</label>
+			</div>
+			<div class="weui_cell_bd weui_cell_primary">
+				<input id="qq2" class="weui_input" type="tel" maxlength="11" placeholder="买家可以添加店主QQ号码"></div>
+		</div>
+		<div class="weui_btn_area">
+			<a class="weui_btn weui_btn_primary" id="showTooltips">保存</a>
+		</div>
+	</section>
+
+	<script src="frozenui-1.3.0/lib/zepto.min.js"></script>
+	<script src="frozenui-1.3.0/js/frozen.js"></script>
+	<script src="js/rem.js"></script>
+	<script>
+	function checknull(info){
+		el=$.tips({
+	        content:info+'不能为空',
+	        stayTime:2000,
+	        type:"info"
+	     });
+	} 
+	function checkpattern(info){
+		el=$.tips({
+            content:info+'格式不正确',
+            stayTime:2000,
+            type:"success"
+        	});	
+	}  
+    $("#showTooltips").tap(function(){
+    	var phone=$("#phone").val();
+    	var shopname=$("#shopname").val();
+    	var q1=$("#qq1").val();
+    	var q2=$("#qq2").val();
+    	var phone_partten = /^1[3,5,8]\d{9}$/;
+    	var qq_pattern=/^[1-9]\d{4,11}$/;
+    	console.log(phone);
+    	if(shopname==""){checknull("店铺名");}
+        else if(phone==""){checknull("手机号码");}
+        else if(q1=="" || q2==""){checknull("QQ号码");}
+        else if(!phone_partten.test(phone)){checkpattern("手机号码");}
+        else if(!qq_pattern.test(q1) || !qq_pattern.test(q2)){checkpattern("QQ号码");}
+        
+    });
+       
+    </script>
+</body>
+</html>

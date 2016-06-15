@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="cardspay.cn">
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, user-scalable=no,initial-scale=1.0"/>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <title>我的购买</title>
+    <link rel="stylesheet" href="css/weui.min.css">
+    <link rel="stylesheet" href="frozenui-1.3.0/css/frozen.css">
+    <link rel="stylesheet" type="text/css" href="css/my_order.css">
+    <link rel="stylesheet" type="text/css" href="css/common.css">
+
+    </head>
+<body>
+    <div class="header">
+        <div class="headItem on waitpay"><i class="newtip"></i>待付款</div>
+        <div class="headItem paid">已付款</div>
+    </div>
+    <!-- 头部导航覆盖 -->
+    <div class="headCover"></div>
+    <section class="content">
+        <div class="weui_cells">
+            <div class="weui_cell">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <div class="order_time fl">
+                        下单时间
+                        <span>2015-6-23 17:23:58</span>
+                    </div>
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="main_img">
+                    <img src="images/my_order/main.png"></div>
+                <div class="main_info fr">
+                    <div class="main_title">韩版连衣裙夏夜店女王连衣裙上班...</div>
+                    <div class="main_mini fl">
+                        <img src="images/my_order/1.png">
+                        <img src="images/my_order/2.png">
+                        <img src="images/my_order/3.png">
+                        <img src="images/my_order/1.png">
+                        <!-- <img src="images/my_order/2.png" class="ellipsis_show"> -->
+                        <span class="ellipsis">...</span>
+                        <img src="images/my_order/3.png">
+                    </div>
+                    <div class="detail fr">
+                        <a href="order_detail_nopay.html">查看订单明细</a>
+                    </div>
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <div class="order_total fl ">
+                        合计金额
+                        <span class="big">250.</span>
+                        <span class="min">12</span>
+                    </div>
+                    <div class="btns fr">
+                        <!-- <input type="button" class="canel" value="移除">
+                        <input type="button" class="pay" value="付款"> -->
+                        <a href="javascript:void(0);" class="canel">移除</a>
+                        <a href="javascript:void(0);" class="pay">付款</a>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="weui_cells">
+            <div class="weui_cell">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <div class="order_time fl">
+                        下单时间
+                        <span>2015-6-23 17:23:58</span>
+                    </div>
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="main_img">
+                    <img src="images/my_order/main.png"></div>
+                <div class="main_info fr">
+                    <div class="main_title">韩版连衣裙夏夜店女王连衣裙上班...</div>
+                    <div class="main_mini fl">
+                        <img src="images/my_order/1.png">
+                        <img src="images/my_order/2.png">
+                        <img src="images/my_order/3.png">
+                        <img src="images/my_order/1.png">
+                        <img src="images/my_order/2.png" class="ellipsis_show">
+                        <span class="ellipsis">...</span>
+                        <img src="images/my_order/3.png">
+                    </div>
+                    <div class="detail fr">
+                        <a href="order_detail_nopay.html">查看订单明细</a>
+                    </div>
+                </div>
+            </div>
+            <div class="weui_cell">
+                <div class="weui_cell_bd weui_cell_primary">
+                    <div class="order_total fl ">
+                        合计金额
+                        <span class="big">250.</span>
+                        <span class="min">12</span>
+                    </div>
+                    <div class="btns fr">
+                        <a href="javascript:void(0);" class="canel">移除</a>
+                        <a href="javascript:void(0);" class="pay">付款</a>
+                        <div class="clear" ></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- 支付弹窗 -->
+    <div class="wx-share" id="wxShare"></div>
+    <div class="orderPay-footer">
+        <div class="sec-payment">
+           <!--  <div class="total">
+                <div class="t_total">合计 447.00</div>
+            </div> -->
+            <div class="sec-payment-title">可单种支付或多种支付<div class="t_total fr">合计 447.00</div></div>
+            <!--余额支付-->
+            <div class="money-pay vg-flex-wrap">
+                <span class="money-pay-icon"></span>
+                <label for="money" class="vg-flex-item">
+                    <div class="vg-flex-wrap money-pay-box">
+                        <div class="money-pay-title">余额支付</div>
+                        <div class="money-pay-input-box vg-flex-item clearfix" style="display: none;">
+                            <input type="number" placeholder="输入金额" id="money">
+                            <div class="leftMoney">剩142</div>
+                        </div>
+                        <div class="vg-flex-item leftMoney2">剩142</div>
+                    </div>
+                </label>
+                <span class="pay-select-icon money-select selected"></span>
+            </div>
+            <!--微信支付-->
+            <div class="wx-pay vg-flex-wrap">
+                <span class="wx-pay-icon"></span>
+                <label for="" class="vg-flex-item">
+                    <div class="vg-flex-wrap wx-pay-box">
+                        <div class="wx-pay-title">微信安全支付</div>
+                    </div>
+                </label>
+                <span class="pay-select-icon wx-select"></span>
+            </div>
+        </div>
+
+
+        <!--底部-->
+        <div class="btns">
+            <button class="btn-gopay">立即支付</button>
+        </div>
+        <!-- 遮挡下面按钮不能点击 -->
+        <div class="ui-dialog-fg"></div>
+    </div>
+    <!-- 输入密码弹窗 -->
+        <div class="ui-dialog pwd-dialog">
+            <div class="ui-dialog-cnt">
+                <h1>需支付<em>55.00</em>（剩余555.00）</h1>
+                <span id="pwdDiaCloseBtn"></span>
+                <div class="pwd-box"><input type="password" id="input-show" placeholder="请输入支付密码" maxlength="6">
+                <input type="text" autofocus="autofocus" id="input-cover" maxlength="6"></div>
+                <div class="pwdBtn"><button>确定</button></div>
+            </div>
+        </div>
+
+    <script src="js/rem.js"></script>
+    <script src="js/commonAddress.js"></script>
+    <script src="frozenui-1.3.0/lib/zepto.min.js"></script>
+    <script src="frozenui-1.3.0/js/frozen.js"></script>
+    <script>
+    $(function(){
+        $(".headItem").tap(function(){
+            $(this).addClass('on').siblings().removeClass('on');
+        });
+        var flag=true;
+        $(".pay").tap(function(){
+            $("#wxShare").css("display","block");
+            // $(".orderPay-footer").addClass("animate");
+            // $(".orderPay-footer").css("bottom","14.5rem");
+            $(".orderPay-footer").addClass("show");
+            flag=false;
+        });
+        $("#wxShare").tap(function(){
+
+            if(!flag){
+                // $("html").toggleClass("hide");
+                // $("body").removeClass("hide");
+                $(this).css("display","none");
+                $(".orderPay-footer").removeClass("show");
+                flag=true;
+            }
+        });
+        $(".canel").tap(function(){
+            $(this).parent().parent().parent().parent().css("display","none");
+        });
+        $(".paid").tap(function(){
+            location.href="my_order_paid.html";
+        });
+       var canClick=false;
+        // 输入密码
+        $("#input-cover")[0].addEventListener("input",function(){
+            var coverVal=$(this).val(),l=coverVal.length;
+            if(l>=6){
+                trueVal=coverVal.substr(0,6);
+                $("#input-show").val(trueVal);
+                canClick=true;
+                $(".pwdBtn button").addClass("active");
+            }else{
+                $("#input-show").val(coverVal);
+                canClick=false;
+                $(".pwdBtn button").removeClass("active");
+            }
+        },false);
+
+
+        // 支付弹窗密码框
+        $(".btn-gopay").tap(function(){
+
+            if(wxSel.hasClass("selected") && !moneySel.hasClass("selected")){
+                $(".money-pay-input-box").hide();
+            }else{
+                $(".ui-dialog").dialog("show");
+            }
+        });
+        $("#pwdDiaCloseBtn").tap(function(){
+            $(".ui-dialog").dialog("hide");
+            $(".pwd-box input").val("");
+        });
+        $(".pwdBtn button").tap(function(){
+            if(canClick){
+                $(".ui-dialog").dialog("hide");
+                var el;
+                el=$.tips({
+                    content:'支付成功',
+                    stayTime:2000,
+                    type:"success"
+                })
+                el.on("tips:hide",function(){
+                    window.location.href="paySuccess.html";
+                })
+            }else{
+
+            }
+
+        });
+
+        // 判断支付
+        var moneySel=$(".money-select"),wxSel=$(".wx-select"),sels=$(".pay-select-icon");
+        sels.tap(function(){
+            $(this).toggleClass("selected");
+            if(moneySel.hasClass("selected") && !wxSel.hasClass("selected")){
+                $(".money-pay-input-box").hide();
+                $(".leftMoney2").show();
+            }else{
+                $(".leftMoney2").hide();
+                $(".money-pay-input-box").show();
+            }
+            //判断都不选择的时候，支付按钮变成灰色,不弹出密码框
+            if(!moneySel.hasClass("selected") && !wxSel.hasClass("selected")){
+                $(".btn-gopay").css("background","#999");
+                $(".ui-dialog-fg").css("display","block");
+            }else{
+                $(".btn-gopay").css("background","#5c3164");
+                 $(".ui-dialog-fg").css("display","none");
+            }
+        });
+
+        //输入框的时候底部遮挡
+        $("input").focus(function(){
+            $(".head-common").css("position","static");
+            // $(".orderPay-footer").css("bottom","-15rem");
+        }).blur(function(){
+            $(".head-common").css("position","fixed");
+            $(".orderPay-footer").css("bottom","0");
+        });
+        // 清除备注内容
+        $(".btn-inputClear").tap(function(e){
+            e.stopPropagation();
+            $(this).parents(".orderPay-list-bd-note").children("input").val("");
+        });
+
+    });
+
+</script>
+</body>
+</html>

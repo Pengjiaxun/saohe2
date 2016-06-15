@@ -1,0 +1,79 @@
+/*头部*/
+.bg{
+	background:url("../images/icon_top_bg.png") center no-repeat;
+	background-size:cover;
+	height:100%;
+	width:100%;
+}
+.bg_top{
+	padding-top:1.25rem;
+	width:100%;
+	height:4.65rem;
+}
+.portrait img{
+/*	background:url("../images/icon_portrait.png") center no-repeat;
+	background-size:3.75rem;*/
+	margin:0 1rem 0 1.25rem;
+	width:3.75rem;
+	height:3.75rem;
+	border-radius:100%;
+	border:2px solid #fff;
+}
+.shop_title .title1{
+	margin-top:0.75rem;
+	color:#fff;
+	font-size:0.9rem;
+    width:11.5rem;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+}
+.shop_title .title2{
+	color:rgba(255,255,255,0.6);
+	font-size:0.7rem;
+    width:11.5rem;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    overflow:hidden;
+}
+/*中间*/
+.ui-border-tb{
+	border-top:1px solid #e0e0e0;
+	border-bottom:1px solid #e0e0e0;
+}
+.ui-border-b{
+	border-bottom:1px solid #e0e0e0;
+}
+.content2{
+	margin:0.5rem 0;
+}
+.open_shop{
+	color:#000;
+	display:block;
+	background:#fff;
+	width:100%;
+	height:2.2rem;
+	line-height:2.2rem;
+	text-align:center;
+}
+.newtip:before{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0.35rem;
+    height: 0.35rem;
+    background-color: #00C335;
+    border-radius: 50%;
+    top: 0.4rem;
+    left: -0.5rem;
+}
+
+
+
+
+
+
+
+
+
+

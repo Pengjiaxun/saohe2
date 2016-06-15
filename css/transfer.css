@@ -1,0 +1,98 @@
+.transfer_myself,.transfer_other{
+	background:white;
+	margin:0.5rem 0;
+}
+.vg-list-icon{
+	padding:0.5rem 0 0.5rem 0.75rem;
+	width:1.2rem;
+	height:1.2rem;
+	display:block;
+}
+
+.tansfer_info h1{height:1.35rem;line-height: 1.35rem;color:#999;font-size:0.6rem;padding-left:0.75rem}
+.tansfer-box{background:white;padding-bottom: 10px;}
+
+.tansfer-box span{display:block;width:3.8rem;margin:0 0 0 0.6rem;height:2.5rem;line-height:2.5rem;}
+.tansfer-box p{height:1.5rem;line-height:1.5rem;}
+.username{padding-bottom:0.4rem;height:1.9rem}
+.tansfer-input{height:2.5rem;position: relative;}
+.tansfer-input span{line-height:2.5rem;height: 2.5rem;width:3.75rem;}
+.tansfer-input p{padding:0.4rem 1.5rem 0.4rem 0;}
+.tansfer-input p input{border: 1px solid #83267b;
+   width:100%;height:1.9rem;line-height:1.9rem;border-radius:3px;padding-left:0.4rem;}
+/*确定按钮*/
+.btns{padding:2rem 0.75rem;font-size:0.9rem;text-align:center;}
+.btns button{background:#83267b;width:100%;height:2.2rem;line-height:2.2rem;border-radius:5px;display:block;color:#fff;}
+
+/*密码弹窗*/
+.pswinput{
+	position: absolute;
+	width: 290px;
+	height: 250px;
+	top:50px;
+	left: 50%;
+	margin-left: -145px;
+	z-index: 100;
+	background-color: #fff;
+	text-align: center;
+	border-radius: 5px;
+	display: none;
+/*	padding:0 15px;
+	box-sizing:border-box; */
+}
+.pswinput h1{
+	height: 40px;
+	line-height: 40px;
+	font-size: 16px;
+	text-align: center;
+	border-bottom: 1px solid #ccc;
+	position: relative;
+	padding:0;
+}
+#close{
+	display:block;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 50%;
+	margin-top: -10px;
+	right: 15px;
+	background: url(../images/icon_delete_detail.png)center no-repeat;
+	background-size: 20px 20px;
+}
+.pswinput img{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	margin:20px 0 5px 0;
+}
+.pswinput p{font-size: 14px;}
+.pswinput .inputbox{position: relative;top: -40px;}
+.pswinput input{
+	border: none;
+    width: 300px;
+    height: 41px;
+    letter-spacing: 35px;
+    background: url(../images/bg_input_num.png) left center no-repeat;
+    -webkit-background-size: 244px 41px;
+    background-size: 244px 41px;
+    margin-top: 10px;
+    margin-left: 28px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.pswinput .inputbox .inputimg{
+	width: 40px;
+	height: 40px;
+	display: none;
+	background:url(../images/icon_input_yuan.png) center no-repeat;
+	-webkit-background-size: 10px 10px;
+	background-size: 10px 10px;
+}
+.pswinput .inputbox .inputimg:first-child{
+	margin-left: 24px;
+}
+/*.select{
+	box-shadow:0 0px 3px #4E8ED2;
+}*/
